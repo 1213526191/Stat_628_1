@@ -19235,6 +19235,14 @@ $$\text{Bodyfat}(\%)_i = \beta_0 + \beta_1*\text{Abdomen}_i(\text{cm}) + \epsilo
 </div>
 </div>
 </div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Estimate"><center>Estimate</center><a class="anchor-link" href="#Estimate">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
@@ -19270,7 +19278,15 @@ ABDOMEN       0.6158889  0.0273459  22.52217 8.232401e-62
 </div>
 </div>
 
-</div><div class="fragment">
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="-$R^2$"><center> $R^2$</center><a class="anchor-link" href="#-$R^2$">&#182;</a></h2>
+</div>
+</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
@@ -19306,6 +19322,14 @@ ABDOMEN       0.6158889  0.0273459  22.52217 8.232401e-62
 </div>
 </div>
 
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Confidence-Interval"><center>Confidence Interval</center><a class="anchor-link" href="#Confidence-Interval">&#182;</a></h2>
+</div>
+</div>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -19344,8 +19368,8 @@ ABDOMEN       0.562028   0.6697498
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Laymen&#8217;s-interpretation-"><center>Laymen&#8217;s interpretation </center><a class="anchor-link" href="#Laymen&#8217;s-interpretation-">&#182;</a></h1><p>$\text{Bodyfat}(\%) = -38 + 0.62*\text{Abdomen}(\text{cm})$</p>
-<p>For example, we take one of our teammate's abdomen data, whose abdomen is 85cm, and his predicted bodyfat is 14.7%. He believes it's reasonable and realistic.</p>
+<h1 id="Laymen&#8217;s-interpretation-"><center>Laymen&#8217;s interpretation </center><a class="anchor-link" href="#Laymen&#8217;s-interpretation-">&#182;</a></h1><p>$$\text{Bodyfat}(\%) = -38 + 0.62*\text{Abdomen}(\text{cm})$$</p>
+<p>For example, we take one of our teammate's abdomen data, which is 85cm (measured by me). So his predicted bodyfat is 14.7% while real number is 16%(According to him). Our model is a good guess for bodyfat.</p>
 
 </div>
 </div>
@@ -19356,9 +19380,9 @@ ABDOMEN       0.562028   0.6697498
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Check-Assumption"><center>Check Assumption</center><a class="anchor-link" href="#Check-Assumption">&#182;</a></h1><ol>
 <li>It's a linear model.(Obviously from correlation Plot)</li>
-<li>Residulas seems follow normality from QQ-Plot. </li>
-<li>Homoscedasticity is not good.(From residual VS fitted Plot)</li>
-<li>Independency is not good.(From Scale-Loction Plot)</li>
+<li>Residuals seems follow normality from QQ-Plot. </li>
+<li>Variance is not constant.(From residual VS fitted Plot)</li>
+<li>There exists some patterns between residuals and variables.(Independence)</li>
 </ol>
 
 </div>
