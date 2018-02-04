@@ -1,0 +1,3 @@
+python neuralnet2.py $1
+rm test.arff
+rm train.arff
