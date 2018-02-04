@@ -9,7 +9,7 @@ Bodyfat Prediction
 ****
 ## Contents
 
-* [Getting Started](#Getting Started)
+* [Getting Started](# Getting Started)
 * Jupyter Notebook
 * Slides
 * Cross Validation Table
