@@ -4,7 +4,7 @@ library(car)
 
 # Load data ---------------------------------------------------------------
 
-path = "data/newbodyfat2.csv"
+path = "../data/newbodyfat2.csv"
 bf_ori = read_csv(path)
 
 
@@ -13,22 +13,16 @@ bf_ori = read_csv(path)
 bf = bf_ori %>%
   select(-group)
 model2 = lm(BODYFAT ~ ., bf)
-model.AIC <- step(model2, k=2)
-newbf = model.AIC$model
+model_BIC <- step(model2, k=log(249))
+newbf = model_BIC$model
 num = ncol(newbf) - 1
-
-
-
-
-
-
 
 
 
 # R^2 ---------------------------------------------------------------------
 
 model_AIC=lm(BODYFAT ~ ., data=newbf)
-a = summary(model_AIC)
+a = summary(model_BIC)
 
 # CV ----------------------------------------------------------------------
 
@@ -39,4 +33,4 @@ mse = cv_information(newbf)
 # Output ------------------------------------------------------------------
 
 
-AIC = c(mse, num, a$r.squared)
+BIC = c(mse, num, a$r.squared)

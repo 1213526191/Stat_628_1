@@ -4,7 +4,7 @@ library(car)
 
 # Load data ---------------------------------------------------------------
 
-path = "data/newbodyfat2.csv"
+path = "../data/newbodyfat2.csv"
 bf_ori = read_csv(path)
 
 

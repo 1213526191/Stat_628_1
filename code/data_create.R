@@ -4,7 +4,7 @@ library(car)
 
 # Load Data ---------------------------------------------------------------
 
-bf_ori<-read_csv("data/BodyFat.csv")
+bf_ori<-read_csv("../data/BodyFat.csv")
 
 
 # Delete Useless Variable --------------------------------------------
@@ -44,4 +44,4 @@ newbf$group[orders[201:249]] = 5
 
 # Create newbodyfat -------------------------------------------------------
 
-write_csv(newbf,"data/newbodyfat2.csv")
+write_csv(newbf,"../data/newbodyfat2.csv")
